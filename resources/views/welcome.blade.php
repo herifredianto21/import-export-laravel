@@ -17,6 +17,19 @@
     <body class="antialiased bg-gray-900">
         
         <div class="max-w-7xl mx-auto">
+
+            <div class="my-2">
+                <form action="/range-pegawai" method="GET" id="myForm">
+                    <div class="input-group mb-3">
+                        <input type="date" class="form-control" name="start_date">
+                        <input type="date" class="form-control" name="end_date">
+                        <button class="btn btn-primary" type="submit">GET</button>
+                        <button class="btn btn-primary" type="button" onclick="myFunction()" value="Reset form">GET</button>
+                        {{-- <input type="button" > --}}
+                    </div>
+                </form>
+            </div>
+
             <div class="flex justify-between m-2 p-2 bg-slate-700">
                 <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -30,4 +43,10 @@
         </div>
 
     </body>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myForm").reset();
+        }
+    </script>
 </html>

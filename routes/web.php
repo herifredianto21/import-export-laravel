@@ -21,3 +21,4 @@ Route::post('/import', [ExcelController::class, 'import'])->name('import');
 
 Route::get('/search', [ExcelController::class, 'search'])->name('search');
 
+Route::get('/range-pegawai', [ExcelController::class, 'rangepegawai']);
